@@ -53,7 +53,6 @@ module.exports = {
                         } else {
                             fn = this.routePathPost[pathname];
                         }
-                        console.log(`method:${request.method.toLowerCase()} +++++ path:${pathname}`);
                         if (fn) {
                             fn(request, response);
                         } else {
@@ -79,6 +78,7 @@ module.exports = {
             response.write(wrongHtml)
             response.end()
         }
+        console.log(`method:${request.method.toLowerCase()} +++++ path:${pathname}`);
 
     }
 };
