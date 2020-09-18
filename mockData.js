@@ -1,3 +1,4 @@
+// mock数据
 const egMock = [
 		{
 			method:'get',
