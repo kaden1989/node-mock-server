@@ -47,6 +47,9 @@ module.exports = {
         request.on('error',(err)=>{
             console.log(`request err:${err}`)
         })
+        response.setHeader( "Content-Type", "text/json; charset=utf-8");
+        response.setHeader("Access-Control-Allow-Headers", "Content-Type, Accept");
+        response.setHeader("Access-Control-Allow-Origin", "*");
         const mockHandle = (item)=>{
                         if (request.method.toLowerCase() === 'get') {
                             fn = this.routePathGet[pathname];
